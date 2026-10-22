@@ -20,28 +20,9 @@ A responsive quiz app for practising HTML, CSS, and JavaScript interview questio
 | JavaScript | Quiz logic, DOM manipulation, event handling |
 | localStorage | Persisting best scores between sessions |
 
-## Getting Started
 
-1. Clone or download this repository.
-2. Open `index.html` in any modern browser.
-3. No installation or build step required.
 
-## File Structure
 
-```
-WebQuest/
-├── index.html       ← Main HTML page
-├── style.css        ← All styles and responsive design
-├── questions.js     ← Quiz question data (array of objects)
-├── script.js        ← Application logic
-├── README.md        ← This file
-└── assets/          ← Images and icons (if added)
-```
 
 ## Live Demo
 
-_Coming soon — will be deployed on GitHub Pages._
-
-## Author
-
-Built as a front-end development portfolio project.
