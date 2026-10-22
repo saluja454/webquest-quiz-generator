@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="WebQuest — Practice HTML, CSS, and JavaScript interview questions with instant feedback and score tracking.">
+  <title>WebQuest — Front-End Interview Practice</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== NAVIGATION BAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo" id="nav-logo">
+        <span class="logo-icon">&#9670;</span> WebQuest
+      </a>
+      <ul class="nav-links">
+        <li><a href="#categories" class="nav-link">Categories</a></li>
+        <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+        <li><a href="#features" class="nav-link">Features</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ========================================================= -->
+  <!--  SECTION 1: HOME PAGE                                     -->
+  <!--  This is the landing page the user sees first.            -->
+  <!-- ========================================================= -->
+  <section class="home-page" id="home-page">
+
+    <!-- Hero -->
+    <header class="hero">
+      <h1 class="hero-title">Get Interview-Ready,<br>One Question at a Time.</h1>
+      <p class="hero-subtitle">
+        Practice essential HTML, CSS, and JavaScript questions, get instant
+        feedback, and track your progress — all in your browser.
+      </p>
+      <a href="#categories" class="btn btn-primary hero-btn">Start Practising</a>
+    </header>
+
+    <!-- Category Cards -->
+    <div class="categories" id="categories">
+      <h2 class="section-title">Choose a Category</h2>
+      <div class="card-grid">
+
+        <!-- HTML Card -->
+        <div class="category-card" id="card-html">
+          <span class="card-icon">&#60;/&#62;</span>
+          <h3 class="card-title">HTML</h3>
+          <p class="card-description">
+            Test your knowledge of semantic elements, forms, tables,
+            attributes, and document structure.
+          </p>
+          <p class="card-best-score" id="best-score-html"></p>
+          <button class="btn btn-primary card-btn" data-category="html">
+            Start HTML Quiz
+          </button>
+        </div>
+
+        <!-- CSS Card -->
+        <div class="category-card" id="card-css">
+          <span class="card-icon">&#123; &#125;</span>
+          <h3 class="card-title">CSS</h3>
+          <p class="card-description">
+            Challenge yourself with selectors, Flexbox, Grid, animations,
+            responsive design, and the box model.
+          </p>
+          <p class="card-best-score" id="best-score-css"></p>
+          <button class="btn btn-primary card-btn" data-category="css">
+            Start CSS Quiz
+          </button>
+        </div>
+
+        <!-- JavaScript Card -->
+        <div class="category-card" id="card-js">
+          <span class="card-icon">JS</span>
+          <h3 class="card-title">JavaScript</h3>
+          <p class="card-description">
+            Practice variables, functions, DOM manipulation, events,
+            arrays, and common interview patterns.
+          </p>
+          <p class="card-best-score" id="best-score-js"></p>
+          <button class="btn btn-primary card-btn" data-category="js">
+            Start JS Quiz
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- How It Works -->
+    <div class="how-it-works" id="how-it-works">
+      <h2 class="section-title">How It Works</h2>
+      <div class="steps-grid">
+        <div class="step-card">
+          <span class="step-number">1</span>
+          <h3>Pick a Topic</h3>
+          <p>Choose HTML, CSS, or JavaScript to start your quiz.</p>
+        </div>
+        <div class="step-card">
+          <span class="step-number">2</span>
+          <h3>Answer Questions</h3>
+          <p>Select the best answer from four options for each question.</p>
+        </div>
+        <div class="step-card">
+          <span class="step-number">3</span>
+          <h3>Learn Instantly</h3>
+          <p>See explanations for every question — right or wrong.</p>
+        </div>
+        <div class="step-card">
+          <span class="step-number">4</span>
+          <h3>Track Progress</h3>
+          <p>Review your answers and beat your best score.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features -->
+    <div class="features" id="features">
+      <h2 class="section-title">Why WebQuest?</h2>
+      <div class="features-grid">
+        <div class="feature-item">
+          <span class="feature-icon">&#9889;</span>
+          <h3>Instant Feedback</h3>
+          <p>Know immediately if your answer is correct and why.</p>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon">&#128218;</span>
+          <h3>Clear Explanations</h3>
+          <p>Every question comes with a detailed explanation.</p>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon">&#128202;</span>
+          <h3>Score Tracking</h3>
+          <p>Your best score for each category is saved locally.</p>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon">&#128241;</span>
+          <h3>Fully Responsive</h3>
+          <p>Practice on your phone, tablet, or desktop.</p>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon">&#9989;</span>
+          <h3>Answer Review</h3>
+          <p>Go back and study every question after the quiz.</p>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon">&#127919;</span>
+          <h3>Interview-Focused</h3>
+          <p>Questions are based on real front-end interview topics.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>&copy; 2026 WebQuest. Built for learning and interview preparation.</p>
+    </footer>
+  </section>
+
+  <!-- ========================================================= -->
+  <!--  SECTION 2: QUIZ INTERFACE                                -->
+  <!--  Hidden by default. Shown when a quiz starts.             -->
+  <!-- ========================================================= -->
+  <section class="quiz-page hidden" id="quiz-page">
+    <div class="quiz-container">
+
+      <!-- Quiz Header -->
+      <div class="quiz-header">
+        <h2 class="quiz-category" id="quiz-category">Category</h2>
+        <div class="timer-badge" id="timer-badge" aria-live="polite">
+          <span class="timer-icon">&#9201;</span>
+          <span class="timer-seconds" id="timer-seconds">30</span>
+        </div>
+        <span class="quiz-progress-text" id="quiz-progress-text">Question 1 / 10</span>
+      </div>
+
+      <!-- Progress Bar -->
+      <div class="progress-bar-track" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+        <div class="progress-bar-fill" id="progress-bar-fill"></div>
+      </div>
+
+      <!-- Question -->
+      <div class="question-card">
+        <p class="question-text" id="question-text">Question text goes here.</p>
+      </div>
+
+      <!-- Answer Options -->
+      <div class="options-list" id="options-list">
+        <!-- Options will be created by JavaScript -->
+      </div>
+
+      <!-- Explanation (shown after answering) -->
+      <div class="explanation-box hidden" id="explanation-box">
+        <p class="explanation-label">Explanation</p>
+        <p class="explanation-text" id="explanation-text"></p>
+      </div>
+
+      <!-- Quiz Navigation Buttons -->
+      <div class="quiz-nav">
+        <button class="btn btn-secondary" id="exit-quiz-btn">Exit Quiz</button>
+        <button class="btn btn-primary hidden" id="next-question-btn">Next Question</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!--  SECTION 3: RESULTS PAGE                                  -->
+  <!--  Hidden by default. Shown after the last question.        -->
+  <!-- ========================================================= -->
+  <section class="results-page hidden" id="results-page">
+    <div class="results-container">
+
+      <h2 class="results-heading">Quiz Complete!</h2>
+
+      <!-- Score Circle -->
+      <div class="score-circle" id="score-circle">
+        <span class="score-percent" id="score-percent">0%</span>
+      </div>
+
+      <p class="results-message" id="results-message">Great effort!</p>
+
+      <!-- Stats Row -->
+      <div class="results-stats">
+        <div class="stat-box stat-correct">
+          <span class="stat-number" id="stat-correct">0</span>
+          <span class="stat-label">Correct</span>
+        </div>
+        <div class="stat-box stat-incorrect">
+          <span class="stat-number" id="stat-incorrect">0</span>
+          <span class="stat-label">Incorrect</span>
+        </div>
+        <div class="stat-box stat-total">
+          <span class="stat-number" id="stat-total">0</span>
+          <span class="stat-label">Total</span>
+        </div>
+      </div>
+
+      <!-- Result Buttons -->
+      <div class="results-actions">
+        <button class="btn btn-primary" id="review-answers-btn">Review Answers</button>
+        <button class="btn btn-secondary" id="retry-quiz-btn">Retry Quiz</button>
+        <button class="btn btn-secondary" id="go-home-btn">Back to Home</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!--  SECTION 4: ANSWER REVIEW                                 -->
+  <!--  Hidden by default. Shown when user clicks Review.        -->
+  <!-- ========================================================= -->
+  <section class="review-page hidden" id="review-page">
+    <div class="review-container">
+
+      <div class="review-header">
+        <h2 class="review-heading">Answer Review</h2>
+        <button class="btn btn-secondary" id="back-to-results-btn">Back to Results</button>
+      </div>
+
+      <!-- Review cards will be inserted here by JavaScript -->
+      <div class="review-list" id="review-list"></div>
+
+    </div>
+  </section>
+
+  <!-- Load question data first, then the app logic -->
+  <script src="questions.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
